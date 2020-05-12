@@ -1,11 +1,11 @@
 // Mixins in here
 
-.btn (@bgc: @btn-color, @fontsz: 1.8rem, @fontc: @main-bg) {
+.btn (@bgc: @btn-color, @width: 150px, @fontsz: 1.8rem, @fontc: @main-bg) {
     display: flex;
     justify-content: center;
     background-color: @bgc;
     border-radius: 12px;
-    width: 150px;
+    width: @width;
     margin: auto;
     font-size: @fontsz;
     padding: 4% 0;

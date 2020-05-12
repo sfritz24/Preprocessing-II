@@ -5,17 +5,32 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
+    
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }//end @media
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 90%;
+        padding: 0;
+      }//end @media
     }//end .text-content
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media @mobile {
+        width: 90%;
+        padding: 0;
+        text-align: center;
+      }//end @media
 
       img {
         border-radius: 10px;
@@ -26,6 +41,11 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+    }//end @media
 
     .text-content {
       padding-left: 1%;
@@ -42,6 +62,10 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      width: 90%;
+    }//end @media
+
     img {
       border-radius: 10px;
     }//end img
@@ -53,20 +77,41 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }//end @media
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 80%;
+      }
     }//end .destination
   }//end .content-pick
 
   header {
     border-bottom: 1px dashed @navigation-border;
 
-    div {
+    .top {
       margin: 2% 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @media @mobile {
+        display: flex;
+        flex-direction: column;
+      }//end @media
+
+      h1 {
+        @media @mobile {
+          margin: 2% 0;
+        }//end @media
+      }//end h1
     }//end div
 
     .extend {
@@ -75,19 +120,38 @@
       max-width: 1000px;
       width: 110%;
       margin: auto;
-    }
+
+      @media @mobile {
+        position: relative;
+        left: 0;
+        width: 100%;
+        margin: 0;
+      }//end @media
+    }//end .extend
 
     img {
       border-top: 1px dashed @navigation-border;
       padding: 0 4%;
+
+      @media @mobile {
+        padding: 0 5%;
+      }//end @media
     }//end img
 
     section {
       padding: 2% 0;
+
+      @media @mobile {
+        padding: 2% 5%;
+      }// end @media
     }//end section
   }//end header
 }//end .home
 
 .btn {
   .btn ();
+  
+  @media @mobile{
+    .btn(@width: 90%);
+  }
 }
