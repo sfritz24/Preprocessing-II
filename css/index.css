@@ -127,7 +127,6 @@ table {
 }
 * {
   box-sizing: border-box;
-  border: 1px solid grey;
 }
 html {
   font-size: 62.5%;
